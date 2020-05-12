@@ -1,0 +1,405 @@
+﻿
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.5, minimum-scale=0.5, user-scalable=yes, maximum-scale=2.0, target-densitydpi=device-dpi" />
+
+    <title>MT Materials</title>
+
+    <meta charset="utf-8">
+
+    <meta name="robots" content="all"/>
+
+	<link href="./styles/style.css" type="text/css" rel="stylesheet" />
+	<link href="./styles/mobile.css" type="text/css" rel="stylesheet" />
+	
+    <script type="text/javascript">
+        CURRENT_PAGE = "3";
+        MAIN_PAGE     = "index.html";
+        FILES_FOLDER  = "files";
+
+    </script>
+	
+	
+	<script src="./javascript/init.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        
+	    STATIC_FOLDER = ".";
+	    DYNAMIC_FOLDER = "./..";
+
+	    PUBLICATION_NAME = "MT Materials";
+
+	    CURRENT_VERSION = "2.6.35";
+
+	    LANGS = ['en','de','es','fi','fr','it','ja','nl','no','pl','pt','ru','sv','zh'];
+	    PUBLICATION_TYPE = "catalog";
+
+
+	var main = function () {
+
+		loadScript('./javascript/localizator.js',function(){});
+
+	    if (document.domain.indexOf('publ.com') != -1 || document.domain.indexOf('cld.bz') != -1 || document.domain.indexOf('cld.mobi') != -1 || document.domain.indexOf('cld.local') != -1) {
+			var staticServer = window.location.protocol === 'https:' ? 'https://d2ayihadozxfln.cloudfront.net' : ('http://static.' + window.location.hostname)
+			var url = staticServer + "/publication/" + CURRENT_VERSION + "/basic/cloud.js";
+			loadScript(url,function(){});
+		}
+
+	}
+
+	if (!!window.addEventListener) {
+		window.addEventListener('load', main);
+	} else {
+		window.attachEvent('onload', main);
+	}
+
+	function loadScript(url, callback){
+		var head = document.getElementsByTagName("head")[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = url;
+		head.appendChild(script);
+		if (script.readyState){
+			script.onreadystatechange = function(){
+				if (script.readyState == "loaded" ||
+						script.readyState == "complete"){
+					script.onreadystatechange = null;
+					callback();
+				}
+			};
+		} else {
+			script.onload = function(){
+				callback();
+			};
+		}
+	}
+    </script>
+
+
+    <style type="text/css">
+        .areaLinkItem:hover
+        {
+            	
+	background: transparent;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75869C,endColorstr=#75869C);
+	zoom:1;
+	
+	background:rgb(117,134,156);
+	background:rgba(117,134,156, 0.5);
+	
+
+        }
+
+
+    </style>
+</head>
+<body style="font-size: 20px">
+	    <img id="bodyBg" class="bodyBg" src="./../flash/image/inner_bg.jpg" alt="Background Image" />
+	<div class="infoPopUp" id="infoPopUp" ></div>
+	<div class="popUp" id="popUp">
+		<a id="closeButton" class="closeButtonPopUp" href="#"></a>
+		<table class="popUpTable">
+			<tbody>
+				<tr>
+					<td>
+						<img alt="Cover" src="./../flash/pages/page0001_s.jpg" class="popUpCover" />
+					</td>
+					<td>
+						<h4 id="popupTitle">&nbsp;</h4>
+						<p id="popupText"></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="toolbar">
+		<ul class="zoomContainer" id="zoomContainer">
+			<li>
+				<a class="zoomInButton" id="zoomIn" href="#">
+					<img src="styles/zoomIn.png" alt="Zoom In" />
+				</a>
+			</li>
+			<li>
+				<a class="zoomOutButton" id="zoomOut" href="#">
+					<img src="styles/zoomOut.png" alt="Zoom Out" />
+				</a>
+			</li>
+		</ul>
+
+		
+		
+		<div class="toolbarButtons">
+            
+				<ul class="downloadButton toolbarLink">
+					<li class="iconLi">
+						<img class="iconToolbar" src="styles/save.png" alt="Downloads" />
+                        <img class="iconToolbar mobile" src="styles/save-mobile.png" alt="Downloads" />
+					</li>
+						<li id="downloadPdf" class="downloadSubMenu">
+							<a id="downloadPdfLink" href="./../common/downloads/publication.pdf" target="_blank"></a>
+						</li>
+										                    					
+				</ul>
+		</div>
+
+		
+		
+
+			<a id="pagePrevArrow" class="toLeftButton toolbarLink internalLink" href="./page-2.html"><img class="iconToolbar" src="styles/previous.png" alt="Previous Page" /></a>
+        
+		<span class="pager"><span id="pageLabel"></span>&nbsp;3 / 4</span>
+
+				<a id="nextPageArrow" class="toRightButton toolbarLink internalLink" href="./page-4.html"><img class="iconToolbar" src="styles/next.png" alt="Next Page" /></a>
+
+		<ul class="sharingContainer">
+			<li>
+				<a class="facebookShare" id="facebookShare" href="#" target="_blank">
+                    <img src="styles/facebook_32.png" alt="Share on Facebook" />
+					<span id="facebookShareText" class="shareTitleMenu"></span>
+				</a>
+			</li>
+			<li>
+                <a class="twitterShare" id="twitterShare" href="#" target="_blank">
+                    <img src="styles/twitter_32.png" alt="Tweet" />
+                    <span id="twitterShareText" class="shareTitleMenu"></span>
+                </a>
+			</li>
+			<li>
+                <a class="linkedinShare" id="linkedinShare" href="#" target="_blank">
+                    <img src="styles/linkedin_32.png" alt="Share on LinkedIn" />
+                    <span id="linkedinShareText" class="shareTitleMenu"></span>
+                </a>
+			</li>
+			<li>
+                <a class="tumblrShare" id="tumblrShare" href="#" target="_blank">
+                    <img src="styles/tumblr_32.png" alt="Share on Tumblr" />
+                    <span id="tumblrShareText" class="shareTitleMenu"></span>
+                </a>
+			</li>
+			<li>
+                <a class="googleShare" id="googleShare" href="#" target="_blank">
+                    <img src="styles/google_32.png" alt="Share on Google+" />
+                    <span id="googleShareText" class="shareTitleMenu"></span>
+                </a>
+			</li>
+			<li>
+                <a class="mailShare" id="mailShare" href="#" target="_blank">
+                    <img src="styles/email_32.png" alt="E-mail" />
+                    <span id="mailShareText" class="shareTitleMenu"></span>
+                </a>
+			</li>
+			<li>
+                <a class="vkShare" id="vkShare" href="#" target="_blank">
+                    <img src="styles/vk_32.png" alt="Share on VK" />
+                    <span id="vkShareText" class="shareTitleMenu"></span>
+                </a>
+			</li>
+		</ul>
+
+
+		<div class="verContainer" id="verContainer">
+			<span id="basicVersionTitle" class="basicInfoTitle"></span>
+			<a id="infoButton" class="toolbarLink info" href="#"><img class="iconInfo" src="styles/info.png" alt="Information" /></a>
+
+		</div>
+	</div>
+
+	<div class="mainFrame" id="mainFrame">
+
+		<a class="mobileMenuButton" id="mobileMenuButton">
+            <img src="styles/mobile-menu.png" alt="Show Menu" style="" />
+		</a>
+
+		<div class="mobileNav">
+					<a class="toLeftButton toolbarLink internalLink" href="./page-2.html"><img class="iconToolbar" src="styles/prev-mob.png" alt="Previous Page" /></a>
+			<span class="pager">3 / 4</span>
+					<a class="toRightButton toolbarLink internalLink" href="./page-4.html"><img class="iconToolbar" src="styles/next-mob.png" alt="Next Page" /></a>
+		</div>
+
+		<div id="pageContainer" class="pageContainer" style="width: 612px; height: 792px; margin: 40px 0 0 -306px; background-color:#FFFFFF;">
+			<img alt="Page Background" src="./../common/page-substrates/page0003.jpg" style="width: 100%; height: 100%;">
+
+
+						<p class="textItem testString" style="top:3.787879%;left:11.764706%;width:35.947712%;height:3.282828%;font-size:0.900000em;color:#000000;font-family:Streetscript Redux;">
+							For Music Together Specialists
+						</p>
+						<p class="textItem testString" style="top:8.333333%;left:11.764706%;width:49.836601%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							<b>For each song collection, Music Together Specialists receive:</b>
+						</p>
+						<p class="textItem testString" style="top:10.732323%;left:14.542484%;width:46.732026%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Teacher-mix audio recording with select extended and
+						</p>
+						<p class="textItem " style="top:12.500000%;left:16.503268%;width:15.849673%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							instrumental tracks
+						</p>
+						<p class="textItem " style="top:14.898990%;left:14.542484%;width:47.222222%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Family songbook (to model for teachers how to use the
+						</p>
+						<p class="textItem " style="top:16.792929%;left:16.503268%;width:29.084967%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							songbook with the children in class)
+						</p>
+						<p class="textItem " style="top:19.191919%;left:14.542484%;width:48.366013%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Teaching guide full of developmentally appropriate early
+						</p>
+						<p class="textItem " style="top:20.959596%;left:16.503268%;width:27.941176%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							childhood music-making activities
+						</p>
+						<p class="textItem " style="top:23.358586%;left:14.542484%;width:36.111111%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• SongCards for each song in the collection
+						</p>
+						<p class="textItem " style="top:27.651515%;left:11.764706%;width:35.457516%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							<b>Additional support available to Specialists:</b>
+						</p>
+						<p class="textItem " style="top:30.050505%;left:14.542484%;width:52.450980%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• A wealth of online support documents and sample slassroom
+						</p>
+						<p class="textItem " style="top:31.818182%;left:16.503268%;width:38.235294%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							footage of select songs in each song collection
+						</p>
+						<p class="textItem " style="top:34.217172%;left:14.542484%;width:52.614379%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• One-on-one mentoring from Music Together headquarters to
+						</p>
+						<p class="textItem " style="top:36.111111%;left:16.503268%;width:34.967320%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							support successful delivery of the program
+						</p>
+						<p class="textItem " style="top:38.510101%;left:14.542484%;width:45.261438%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Teaching DVD for every song in each song collection
+						</p>
+						<p class="textItem " style="top:40.909091%;left:14.379085%;width:54.411765%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Skills and songs workshops (ongoing professional development)
+						</p>
+						<p class="textItem " style="top:43.308081%;left:14.542484%;width:47.712418%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Specialist DVD and training guide (ongoing professional
+						</p>
+						<p class="textItem " style="top:45.075758%;left:16.503268%;width:11.764706%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							development)
+						</p>
+						<p class="textItem " style="top:47.474747%;left:14.379085%;width:53.758170%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Classroom teacher in-service tool to prepare Specialists to lead
+						</p>
+						<p class="textItem " style="top:49.368687%;left:16.339869%;width:38.071895%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							successful workshops with classroom teachers
+						</p>
+						<p class="textItem " style="top:51.767677%;left:14.542484%;width:53.921569%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Special-needs mentoring by our on-staff board-certified music
+						</p>
+						<p class="textItem " style="top:53.535354%;left:16.503268%;width:7.352941%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							therapist
+						</p>
+						<p class="textItem " style="top:56.060606%;left:14.542484%;width:55.228758%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Online Social Network to share questions, ideas, and information
+						</p>
+						<p class="textItem " style="top:57.828283%;left:16.503268%;width:28.921569%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							with other providers and specialists
+						</p>
+						<p class="textItem " style="top:62.626263%;left:11.764706%;width:13.888889%;height:3.282828%;font-size:0.900000em;color:#000000;font-family:Streetscript Redux;">
+							For Schools
+						</p>
+						<p class="textItem " style="top:67.045455%;left:14.542484%;width:53.594771%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• High-quality, well-supported curriculum that teachers love and
+						</p>
+						<p class="textItem " style="top:68.939394%;left:16.503268%;width:26.143791%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							find successful in the classroom
+						</p>
+						<p class="textItem " style="top:71.338384%;left:14.542484%;width:47.222222%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• An innovative curriculum that helps children flourish by
+						</p>
+						<p class="textItem " style="top:73.106061%;left:16.503268%;width:43.300654%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							supporting their learning both at school and at home
+						</p>
+						<p class="textItem " style="top:75.505051%;left:14.542484%;width:51.960784%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• A platform for engaging parents in their child’s education and
+						</p>
+						<p class="textItem " style="top:77.272727%;left:16.503268%;width:44.607843%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							building community bonds between home and school
+						</p>
+						<p class="textItem " style="top:79.671717%;left:14.542484%;width:53.758170%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Discount for programs serving high-need or at-risk populations
+						</p>
+						<p class="textItem " style="top:82.070707%;left:14.542484%;width:47.222222%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Discounts for our online store and for select workshops
+						</p>
+						<p class="textItem " style="top:84.469697%;left:14.542484%;width:53.594771%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Marketing materials for your school to distribute to prospective
+						</p>
+						<p class="textItem " style="top:86.237374%;left:16.503268%;width:6.535948%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							families
+						</p>
+						<p class="textItem " style="top:88.636364%;left:14.542484%;width:49.673203%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							• Listing on Music Together’s international Class Locator and
+						</p>
+						<p class="textItem " style="top:90.530303%;left:16.503268%;width:49.836601%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							marketing use of the Music Together In School logo — to help
+						</p>
+						<p class="textItem " style="top:92.297980%;left:16.503268%;width:26.470588%;height:1.893939%;font-size:0.600000em;color:#000000;font-family:Cabin;">
+							parents find the brand they love
+						</p>
+						<p class="textItem testString" style="top:41.287879%;left:78.758170%;width:7.352941%;height:0.378788%;font-size:0.094581em;color:#FFFFFF;font-family:Weiss;">
+							<b>Developed by theCenter forMusic andYoungChildren</b>
+						</p>
+						<p class="textItem " style="top:40.530303%;left:85.947712%;width:0.163399%;height:0.252525%;font-size:0.055142em;color:#FFFFFF;font-family:Weiss;">
+							<b>&#174;</b>
+						</p>
+						<p class="textItem testString" style="top:39.898990%;left:81.209150%;width:2.287582%;height:0.883838%;font-size:0.206358em;color:#FFFFFF;font-family:OTHERVIEW;">
+							DRUM
+						</p>
+						<p class="textItem " style="top:40.656566%;left:80.718954%;width:3.594771%;height:0.378788%;font-size:0.120377em;color:#FFFFFF;font-family:Weiss;">
+							<b>TEACHINGVIDEO</b>
+						</p>
+						<p class="textItem testString" style="top:34.848485%;left:84.640523%;width:1.143791%;height:0.631313%;font-size:0.206358em;color:#FFFFFF;font-family:Disc Makers Font0304;">
+							g
+						</p>
+						<p class="textItem testString" style="top:11.994949%;left:78.758170%;width:10.130719%;height:0.378788%;font-size:0.119825em;color:#151143;font-family:Palatino;">
+							<b>Developedby theCenter forMusicandYoungChildren</b>
+						</p>
+						<p class="textItem " style="top:10.101010%;left:88.562092%;width:0.163399%;height:0.252525%;font-size:0.069855em;color:#151143;font-family:Palatino;">
+							<b>&#174;</b>
+						</p>
+						<p class="textItem testString" style="top:9.974747%;left:82.189542%;width:2.450980%;height:0.757576%;font-size:0.244111em;color:#151143;font-family:Lydian BT;">
+							FLUTE
+						</p>
+						<p class="textItem " style="top:10.732323%;left:82.352941%;width:2.450980%;height:0.505051%;font-size:0.130718em;color:#151143;font-family:Lydian BT;">
+							Teacher Edition
+						</p>
+						<p class="textItem " style="top:26.136364%;left:81.209150%;width:8.660131%;height:1.262626%;font-size:0.385130em;color:#FFFFFF;font-family:Lydian BT;">
+							TAMBOURINE
+						</p>
+						<p class="textItem testString" style="top:85.227273%;left:77.614379%;width:12.908497%;height:0.883838%;font-size:0.251450em;color:#010101;font-family:Optima;">
+							This school is a qualified provider of
+						</p>
+						<p class="textItem " style="top:86.111111%;left:77.287582%;width:13.725490%;height:0.883838%;font-size:0.251450em;color:#010101;font-family:Optima;">
+							Music Together, making a commitment
+						</p>
+						<p class="textItem " style="top:86.994949%;left:77.777778%;width:12.745098%;height:0.883838%;font-size:0.251450em;color:#010101;font-family:Optima;">
+							to include music as an essential part
+						</p>
+						<p class="textItem " style="top:87.752525%;left:80.228758%;width:7.843137%;height:0.883838%;font-size:0.251450em;color:#010101;font-family:Optima;">
+							of its core curriculum.
+						</p>
+		</div>
+
+		<div class="footer">
+					<a style="color:#000000;" class="footerNavLink internalLink " href="./page-1.html">1</a>
+					<a style="color:#000000;" class="footerNavLink internalLink " href="./page-2.html">2</a>
+					<a style="color:#000000;" class="footerNavLink internalLink currPage" href="./page-3.html">3</a>
+					<a style="color:#000000;" class="footerNavLink internalLink " href="./page-4.html">4</a>
+
+				<a style="color:#000000;" class="footerLink" href="./flipbook.html" target="_blank">
+					<span id="poweredBy"></span>&nbsp;FlippingBook
+				</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		if (typeof BASIC_PAGE === 'undefined' && typeof BasicPage !== 'undefined' ){
+			BASIC_PAGE = new BasicPage();
+		}
+    </script>
+</body>
+</html>
+
+
+
