@@ -17,7 +17,7 @@ jobs:
             - run:
                 name: deploy
                 command: |
-                  scp -r -o StrictHostKeyChecking=no dist/* root@198.211.112.212:/var/www/mtlearnandgrow
+                  scp -r -o StrictHostKeyChecking=no * root@198.211.112.212:/var/www/mtlearnandgrow
 workflows:
   version: 2
   build-and-deploy:
