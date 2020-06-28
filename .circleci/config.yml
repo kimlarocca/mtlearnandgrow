@@ -11,8 +11,6 @@ jobs:
       - run: git pull
       - node/with-cache:
           steps:
-            - run: npm install
-            - run: npm run build
             - add_ssh_keys:
                 fingerprints:
                   - "53:e9:1a:71:cf:11:fd:ac:21:d2:b9:fb:dd:33:0d:b9"
